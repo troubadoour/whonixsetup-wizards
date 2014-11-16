@@ -1,0 +1,5 @@
+#!/usr/bin/python
+from whonixsetup import whonix_repository_wizard
+
+if __name__ == '__main__':
+  whonix_repository_wizard.main()

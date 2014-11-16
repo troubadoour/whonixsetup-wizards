@@ -1,0 +1,39 @@
+## This file is part of Whonix.
+## Copyright (C) 2012 - 2014 Patrick Schleizer <adrelanos@riseup.net>
+## See the file COPYING for copying conditions.
+
+Source: whonixsetup-wizards
+Section: misc
+Priority: optional
+Maintainer: troubadour <trobador@riseup.net>
+Build-Depends: debhelper (>= 8), config-package-dev (>=5), python (>= 2.6)
+Homepage: https://www.whonix.org/
+Vcs-Browser: https://github.com/troubadoour/whonixsetup-wizards
+Vcs-Git: https://github.com/troubadoour/whonixsetup-wizards.git
+Standards-Version: 3.9.4
+
+Package: whonixsetup-wizards
+Architecture: all
+Depends: whonix-repository, menu, ${misc:Depends}, ${python:Depends}, python-yaml
+Recommends: anon-icon-pack
+Description: GUI Whonix Setup Tools
+ Gateway connection wizard.
+ Workstation connection wizard.
+
+ These tools are run on first boot of Whonix.
+
+ Whonix APT repository wizard.
+
+ This tool can always be used to enable either Whonix's stable, testers or
+ developers repository or to disable Whonix's repository.
+ .
+ Whonix's APT Repository is not enabled by default. Some users prefer this for
+ trust/security reasons.
+ .
+ On first boot of Whonix, the Whonix Repository Tool gets automatically started
+ by whonixsetup. The user is free to either leave Whonix's repository disabled
+ or to configure it as desired.
+ .
+ Technically speaking, this tool creates or deletes
+ /etc/sources.list.d/whonix.list and adds or deletes Whonix's signing key from
+ apt-key.
